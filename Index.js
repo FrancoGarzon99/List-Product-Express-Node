@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //Routers
 app.get('/', routers);
 app.post('/agregarproducts', routers);
-app.post('/removeproduct', routers);
+app.post('/completeproduct', routers);
 //Server port
 app.listen(3000, () => {
 	console.log('Server in port 3000');

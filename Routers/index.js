@@ -14,8 +14,10 @@ router.get('/', (req, res) => {
 	});
 });
 
+//Router Agregar producto
 router.post('/agregarproducts', (req, res) => {
 	let NuevoProducto = req.body.NewProducto;
+
 	if (NuevoProducto === '') {
 		console.log('no ingresaste datos');
 	}
@@ -24,8 +26,8 @@ router.post('/agregarproducts', (req, res) => {
 		res.redirect('/');
 	}
 });
-
-router.post('/removeproduct', function (req, res) {
+//Router completar Producto
+router.post('/completeproduct', function (req, res) {
 	let ProductoComprado = req.body.check;
 
 	if (typeof ProductoComprado === 'string') {

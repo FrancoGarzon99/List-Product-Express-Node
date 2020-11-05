@@ -1,4 +1,4 @@
-Albums App realizada con React Hooks y Redux. <br/>
+Lista de producto realizada con Node | Express | Ejs <br/>
 En el siguiente link podrás ver el funcionamiento de la app ---->
 
 Instrucciones básicas para iniciar el proyecto(Fork & clone):

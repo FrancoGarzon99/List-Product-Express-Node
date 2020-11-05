@@ -36,7 +36,7 @@
 								Agregar Producto
 							</button>
 						</div>
-					</form>
+					
 					<div class="col s10">
 						<h5>Productos</h5>
 						<% for( var i = 0; i < Productos.length; i++){ %>
@@ -56,11 +56,11 @@
 							class="btn waves-effect cyan lighten-2"
 							type="submit"
 							name="action"
-							formaction="/removeproduct"
+							formaction="/completeproduct"
 						>
 							Producto comprado
 						</button>
-
+</form>
 						<h5>Compras Realizadas</h5>
 
 						<% for(var i = 0; i < ProductosComprados.length; i++){ %>
