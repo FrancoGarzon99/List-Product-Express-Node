@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>List Products</title>
+
+		<!-- Compiled and minified CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+		/>
+
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col s12 m4 l2"><p></p></div>
+				<div class="col s12 m4 l8">
+					<p></p>
+					<h2>Listar Productos</h2>
+					<form action="/agregarproducts" method="POST">
+						<div class="input-field col s10">
+							<input
+								type="text"
+								name="NewProducto"
+								placeholder="Producto a Comprar"
+							/>
+							<button
+								class="btn waves-effect cyan lighten-2"
+								type="submit"
+								name="action"
+							>
+								Agregar Producto
+							</button>
+						</div>
+					</form>
+					<div class="col s10">
+						<h5>Productos</h5>
+						<% for( var i = 0; i < Productos.length; i++){ %>
+						<ul>
+							<label>
+								<input
+									type="checkbox"
+									name="check"
+									value="<%= Productos[i] %>"
+								/>
+								<span><%= Productos[i] %></span>
+							</label>
+						</ul>
+						<% } %>
+
+						<button
+							class="btn waves-effect cyan lighten-2"
+							type="submit"
+							name="action"
+							formaction="/removeproduct"
+						>
+							Producto comprado
+						</button>
+
+						<h5>Compras Realizadas</h5>
+
+						<% for(var i = 0; i < ProductosComprados.length; i++){ %>
+						<ul>
+							<label>
+								<input type="checkbox" checked="checked" disabled="disabled" />
+								<span><%= ProductosComprados[i] %></span>
+							</label>
+							<% } %>
+						</ul>
+					</div>
+				</div>
+				<div class="col s12 m4 l2"></div>
+			</div>
+		</div>
+	</body>
+</html>
